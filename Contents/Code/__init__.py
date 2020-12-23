@@ -592,6 +592,7 @@ class AudiobookAlbum(Agent.Album):
         metadata.rating = float(rating) * 2
 #       metadata.title = title
 #       media.artist = author
+	metadata.collections.add(series)
         self.writeInfo('New data', url, metadata)
 
     def hasProxy(self):
